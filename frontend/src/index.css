@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 min-h-screen font-sans antialiased;
+  }
+}
+
+/* Clean White Hospital Glass & Card Utilities */
+.white-card {
+  @apply bg-white border border-slate-200/80 shadow-sm rounded-2xl;
+}
+
+.white-panel {
+  @apply bg-white/95 backdrop-blur-md border border-slate-200 shadow-sm;
+}
+
+/* Subtle shadows */
+.card-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* Print styles for Clean White Invoice */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invoice-content, #printable-invoice-content * {
+    visibility: visible;
+  }
+  #printable-invoice-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+    padding: 20px;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "medi-life-hms",
+  "version": "1.0.0",
+  "description": "Medi Life Hospital Management System - Full Stack Application",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "backend": "node backend/server.js",
+    "frontend": "cd frontend && npm run dev",
+    "server": "node backend/server.js",
+    "client": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "node backend/server.js",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": ["hospital", "management", "bed-allocation", "billing", "excel-export"],
+  "author": "Medi Life Healthcare Systems",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
