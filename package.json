@@ -10,7 +10,7 @@
     "client": "cd frontend && npm run dev",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "start": "node backend/server.js",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm install && npm run build"
   },
   "keywords": ["hospital", "management", "bed-allocation", "billing", "excel-export"],
   "author": "Medi Life Healthcare Systems",
